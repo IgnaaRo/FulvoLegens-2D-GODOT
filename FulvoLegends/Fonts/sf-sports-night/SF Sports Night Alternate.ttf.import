@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://tre6yqynfydo"
+path="res://.godot/imported/SF Sports Night Alternate.ttf-bea1a88b411074f7444a647009fe7362.fontdata"
+
+[deps]
+
+source_file="res://Fonts/sf-sports-night/SF Sports Night Alternate.ttf"
+dest_files=["res://.godot/imported/SF Sports Night Alternate.ttf-bea1a88b411074f7444a647009fe7362.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

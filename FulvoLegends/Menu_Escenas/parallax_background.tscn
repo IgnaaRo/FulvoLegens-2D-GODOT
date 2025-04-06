@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgaegsydegefd"]
+
+[ext_resource type="Shader" path="res://Menu_Escenas/scroll.gdshader" id="1_xprbx"]
+[ext_resource type="Texture2D" uid="uid://bt55t6fl5xvkc" path="res://sprites/Fondo_menu.png" id="2_k1iys"]
+[ext_resource type="AudioStream" uid="uid://c16mjmhhqysxy" path="res://music/Jeremy Blake - Powerup_ ♫ NO COPYRIGHT 8-bit Music(MP3_160K).mp3" id="3_stjvw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6kge5"]
+shader = ExtResource("1_xprbx")
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(3000, 3000)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_6kge5")
+position = Vector2(-67, -58)
+scale = Vector2(2.00875, 2.17667)
+texture = ExtResource("2_k1iys")
+centered = false
+region_rect = Rect2(0, 0, 3000, 3000)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_stjvw")
+autoplay = true

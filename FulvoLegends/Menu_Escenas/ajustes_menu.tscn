@@ -1,0 +1,170 @@
+[gd_scene load_steps=8 format=3 uid="uid://ds6b04oyw6agn"]
+
+[ext_resource type="Script" path="res://Menu_Escenas/ajustes_menu.gd" id="1_0oxo6"]
+[ext_resource type="FontFile" uid="uid://bnp3mpspb4gcg" path="res://Fonts/sf-sports-night/SF Sports Night NS Alternate.ttf" id="1_pr8v3"]
+[ext_resource type="PackedScene" uid="uid://dgaegsydegefd" path="res://Menu_Escenas/parallax_background.tscn" id="2_3tghi"]
+[ext_resource type="Script" path="res://HSlider.gd" id="3_gf831"]
+[ext_resource type="Texture2D" uid="uid://bs44i1ws8btel" path="res://exit.png" id="4_qwchm"]
+[ext_resource type="Script" path="res://Menu_Escenas/Principal.gd" id="5_adknn"]
+[ext_resource type="FontFile" uid="uid://cmd3dmapllt74" path="res://Fonts/sf-sports-night/SF Sports Night NS AltUpright.ttf" id="6_mt6b5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_0oxo6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -182.5
+offset_right = 182.5
+offset_bottom = 81.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0.145098, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_pr8v3")
+theme_override_font_sizes/font_size = 80
+text = "Ajustes"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_3tghi")]
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.384
+anchor_top = 0.6
+anchor_right = 0.608
+anchor_bottom = 0.644
+offset_left = -58.9503
+offset_top = -210.43
+offset_right = 44.3488
+offset_bottom = -192.729
+theme_override_fonts/font = ExtResource("1_pr8v3")
+theme_override_font_sizes/font_size = 39
+text = "Volumen"
+horizontal_alignment = 1
+
+[node name="Mute" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = 140.0
+offset_right = 42.0
+offset_bottom = 180.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_pr8v3")
+theme_override_font_sizes/font_size = 39
+text = "Mute"
+
+[node name="Mute" type="CheckBox" parent="Mute"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 50.0
+offset_right = 62.0
+offset_bottom = 74.0
+
+[node name="Principal" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 496.0
+offset_top = -296.0
+offset_right = 1364.0
+offset_bottom = 572.0
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(1, 0)
+action_mode = 0
+icon = ExtResource("4_qwchm")
+flat = true
+script = ExtResource("5_adknn")
+
+[node name="ParallaxBackground2" parent="." instance=ExtResource("2_3tghi")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.0
+offset_top = -176.0
+offset_right = 334.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_pr8v3")
+theme_override_font_sizes/font_size = 38
+text = "Modo pantalla (opcion para pc)"
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="CheckButton" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 37
+alignment = 1
+item_count = 3
+selected = 2
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 0
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_mt6b5")
+theme_override_font_sizes/font_size = 52
+text = "Volumen
+"
+horizontal_alignment = 1
+
+[node name="Volumen" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = -80.0
+max_value = 0.0
+script = ExtResource("3_gf831")
+
+[connection signal="toggled" from="Mute/Mute" to="." method="_on_mute_toggled"]
+[connection signal="pressed" from="Principal" to="Principal" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/FullScreen" to="." method="_on_full_screen_pressed"]
+[connection signal="toggled" from="VBoxContainer/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="pressed" from="VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="drag_ended" from="VBoxContainer/Volumen" to="." method="_on_volumen_drag_ended"]
+[connection signal="value_changed" from="VBoxContainer/Volumen" to="." method="_on_volumen_value_changed"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7mq03jpi5s3k"]
+
+[ext_resource type="FontFile" uid="uid://bnp3mpspb4gcg" path="res://Fonts/sf-sports-night/SF Sports Night NS Alternate.ttf" id="1_hehfj"]
+[ext_resource type="PackedScene" uid="uid://dgaegsydegefd" path="res://Menu_Escenas/parallax_background.tscn" id="2_d6fcl"]
+[ext_resource type="Script" path="res://HSlider.gd" id="3_3v0ve"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchor_left = 0.01
+anchor_top = 0.02
+anchor_right = 0.979
+anchor_bottom = 0.958
+offset_left = 136.8
+offset_top = 81.4
+offset_right = -143.68
+offset_bottom = -18.64
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.313
+anchor_top = 0.088
+anchor_right = 0.627
+anchor_bottom = 0.225
+offset_left = 155.46
+offset_top = 108.656
+offset_right = 24.34
+offset_bottom = 64.575
+theme_override_colors/font_color = Color(0, 0, 0.145098, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.0509804)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_hehfj")
+theme_override_font_sizes/font_size = 80
+text = "Ajustes"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_d6fcl")]
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.384
+anchor_top = 0.206
+anchor_right = 0.553
+anchor_bottom = 0.307
+offset_left = 140.28
+offset_top = 216.922
+offset_right = 320.26
+offset_bottom = 164.709
+theme_override_fonts/font = ExtResource("1_hehfj")
+theme_override_font_sizes/font_size = 39
+text = "Volumen"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.358
+anchor_top = 0.355
+anchor_right = 0.59
+anchor_bottom = 0.5
+offset_left = -50.64
+offset_top = 256.885
+offset_right = 251.8
+offset_bottom = 169.5
+theme_override_fonts/font = ExtResource("1_hehfj")
+theme_override_font_sizes/font_size = 38
+text = "Modo pantalla (opcion para pc)"
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.346
+anchor_top = 0.541
+anchor_right = 0.672
+anchor_bottom = 0.541
+offset_left = -0.680054
+offset_top = -106.933
+offset_right = 44.2399
+offset_bottom = 106.067
+script = ExtResource("3_3v0ve")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.751
+anchor_right = 0.659
+anchor_bottom = 0.768
+offset_left = -0.0400391
+offset_top = -4.66302
+offset_right = -0.220093
+offset_bottom = -0.184021
+theme_override_font_sizes/font_size = 37

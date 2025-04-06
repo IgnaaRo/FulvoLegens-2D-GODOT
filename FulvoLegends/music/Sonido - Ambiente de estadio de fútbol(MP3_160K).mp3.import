@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4t8me1uvx2fj"
+path="res://.godot/imported/Sonido - Ambiente de estadio de fútbol(MP3_160K).mp3-b8a3f7f15cd6eea1a9c7c77d549a32f0.mp3str"
+
+[deps]
+
+source_file="res://music/Sonido - Ambiente de estadio de fútbol(MP3_160K).mp3"
+dest_files=["res://.godot/imported/Sonido - Ambiente de estadio de fútbol(MP3_160K).mp3-b8a3f7f15cd6eea1a9c7c77d549a32f0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=2.35
+beat_count=0
+bar_beats=4

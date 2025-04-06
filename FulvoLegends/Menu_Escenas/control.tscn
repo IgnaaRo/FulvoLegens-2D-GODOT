@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://k65prbexyije"]
+
+[ext_resource type="FontFile" uid="uid://d2be3kk5xrx23" path="res://Fonts/Kenney/Kenney Future Narrow.ttf" id="1_1dsca"]
+[ext_resource type="Script" path="res://Menu_Escenas/control.gd" id="1_17tv1"]
+[ext_resource type="FontFile" uid="uid://bnp3mpspb4gcg" path="res://Fonts/sf-sports-night/SF Sports Night NS Alternate.ttf" id="2_d7den"]
+[ext_resource type="PackedScene" uid="uid://dgaegsydegefd" path="res://Menu_Escenas/parallax_background.tscn" id="2_mw8re"]
+[ext_resource type="Script" path="res://Menu_Escenas/Ajustes.gd" id="4_ubfj7"]
+
+[sub_resource type="GDScript" id="GDScript_0sulr"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _on_Ajustes_pressed():  # Cambia \"Button\" por el nombre de tu botón
+	get_tree().change_scene(\"res://Menu_Escenas/ajustes_menu.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o5fs"]
+bg_color = Color(0.635752, 0.0839656, 4.33177e-07, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61fgq"]
+bg_color = Color(0.582598, 0, 0.0967282, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -183.0
+offset_top = -176.0
+offset_right = 198.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_17tv1")
+
+[node name="VBoxMenu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -116.0
+offset_top = 11.0
+offset_right = 445.0
+offset_bottom = 329.0
+theme_override_constants/separation = 100
+
+[node name="Titulo" type="Label" parent="VBoxMenu"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = ExtResource("2_d7den")
+theme_override_font_sizes/font_size = 80
+text = "FulvoLegens"
+
+[node name="VboxBotones" type="VBoxContainer" parent="VBoxMenu"]
+layout_mode = 2
+
+[node name="Jugar" type="Button" parent="VBoxMenu/VboxBotones"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("1_1dsca")
+theme_override_font_sizes/font_size = 30
+text = "Jugar"
+flat = true
+script = SubResource("GDScript_0sulr")
+
+[node name="Ajustes" type="Button" parent="VBoxMenu/VboxBotones"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_1dsca")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_4o5fs")
+action_mode = 0
+text = "Ajustes"
+flat = true
+script = ExtResource("4_ubfj7")
+
+[node name="Salir" type="Button" parent="VBoxMenu/VboxBotones"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_1dsca")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = SubResource("StyleBoxFlat_61fgq")
+text = "Salir"
+flat = true
+
+[node name="ParallaxBackground" parent="VBoxMenu" instance=ExtResource("2_mw8re")]
+
+[connection signal="pressed" from="VBoxMenu/VboxBotones/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="VBoxMenu/VboxBotones/Ajustes" to="VBoxMenu/VboxBotones/Ajustes" method="_on_pressed"]
+[connection signal="pressed" from="VBoxMenu/VboxBotones/Salir" to="." method="_on_salir_pressed"]
