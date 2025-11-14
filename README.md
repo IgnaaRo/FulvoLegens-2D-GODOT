@@ -206,8 +206,8 @@ Interpretaron correctamente el objetivo del juego.
 
 ---
 
-# 📂 Repositorio del Proyecto
-👉 **https://github.com/IgnaaRo/FulvoLegens-2D-ExamenParcial**
+# 📂 GRABACIÓN DEMO
+👉 **[https://github.com/IgnaaRo/FulvoLegens-2D-ExamenParcial](https://youtu.be/PGM4qHd537g)**
 
 ---
 
