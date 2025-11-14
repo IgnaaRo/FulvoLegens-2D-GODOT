@@ -60,6 +60,9 @@ Ser uno de los juegos casuales de fútbol 2D más populares en plataformas PC y 
 - Cambios en tendencias de mercado  
 - Desafíos técnicos  
 
+
+<img width="606" height="376" alt="FODA" src="https://github.com/user-attachments/assets/3a64ce6a-ab3b-421d-941b-65ad7d2bd186" />
+
 ---
 
 # 🧍 Investigación de Usuario
@@ -98,11 +101,21 @@ Ser uno de los juegos casuales de fútbol 2D más populares en plataformas PC y 
 # 🖼️ Mockups y Wireframes
 
 Incluyen:  
-- Menú principal  
-- Pantalla de ajustes  
+- Menú principal
+
+<img width="673" height="380" alt="image" src="https://github.com/user-attachments/assets/087f598c-c5e1-4320-bed6-b08f30490cd8" />
+
+
+- Pantalla de ajustes
+
+<img width="650" height="542" alt="image" src="https://github.com/user-attachments/assets/f27ef7da-9348-42d2-9dba-d9faa8efe244" />
+
+
 - Campo de juego  
 
-*(Las imágenes se encuentran en el documento original del parcial.)*
+<img width="648" height="360" alt="image" src="https://github.com/user-attachments/assets/9942a734-bba4-428f-be39-c74407f02aa1" />
+
+
 
 ---
 
@@ -118,6 +131,9 @@ Dentro del juego:
 - Cronómetro  
 - Ajustes rápidos  
 
+
+<img width="678" height="540" alt="MAPA DE NAVEGACION" src="https://github.com/user-attachments/assets/a87f12a8-2ebe-4038-9a51-2febbd018c76" />
+
 ---
 
 # 🧩 Card Sorting (Cerrado)
@@ -131,6 +147,8 @@ Dentro del juego:
 **Menú Principal:** Jugar, Ajustes, Salir  
 **Juego:** Pausa, Tiempo, Marcador, Controles  
 **Configuración:** Sonido, Controles, Pantalla  
+
+<img width="726" height="473" alt="CARDSORTING" src="https://github.com/user-attachments/assets/1779d89e-528f-4c56-9b8e-0ea2e3d624bf" />
 
 ---
 
@@ -149,7 +167,9 @@ Acción: Presiona *Jugar* rápidamente.
 - Sería útil un mini tutorial  
 
 ### **Ajustes**
-- Le gusta poder ajustar sonido desde pausa  
+- Le gusta poder ajustar sonido desde pausa
+
+<img width="886" height="1192" alt="image" src="https://github.com/user-attachments/assets/926fff3c-0a01-43cf-85cc-2aeefe2c6897" />
 
 ---
 
