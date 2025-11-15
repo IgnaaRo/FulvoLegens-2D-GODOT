@@ -9,7 +9,7 @@ Instituto: *IES 9-008 Manuel Belgrano*
 
 # 🎮 Demo del Juego
 📹 VideoJuego (Carpeta):  
-👉 [https://youtu.be/x9e9dkxObYQ](https://drive.google.com/drive/folders/1lNPQbdLwMsKV6h_mOySWyH8jH1deugTS?usp=sharing)
+👉 [DRIVE](https://drive.google.com/drive/folders/1lNPQbdLwMsKV6h_mOySWyH8jH1deugTS?usp=sharing)
 
 ---
 
@@ -207,7 +207,7 @@ Interpretaron correctamente el objetivo del juego.
 ---
 
 # 📂 GRABACIÓN DEMO
-👉 **[https://github.com/IgnaaRo/FulvoLegens-2D-ExamenParcial](https://youtu.be/PGM4qHd537g)**
+👉 **[VIDEO](https://youtu.be/PGM4qHd537g)**
 
 ---
 
